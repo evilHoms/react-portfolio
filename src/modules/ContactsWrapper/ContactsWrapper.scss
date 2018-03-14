@@ -1,0 +1,10 @@
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px 7px;
+  margin-top: 80px;
+  background: rgba($color: #ffffff, $alpha: 0.05);
+  border-radius: 5px;
+  box-shadow: 0 0 20px 5px rgba($color: #ffffff, $alpha: 0.05);
+}

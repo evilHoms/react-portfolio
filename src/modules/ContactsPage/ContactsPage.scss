@@ -1,0 +1,29 @@
+$title-block-top: 50px;
+$side-blocks-top: 40vh;
+$side-block-side: 12vw;
+
+$main-color: #fff;
+$accent-color: #f57570;
+
+.contacts-page {
+  position: relative;
+  z-index: 100;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+}
+
+.contacts-title {
+  // position: static;
+  margin-top: $title-block-top;
+  text-align: center;
+}
+
+.contacts-title h1 {
+  color: $accent-color;
+  font-size: 36px;
+  font-family: 'Kurale', serif;
+}

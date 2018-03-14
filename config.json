@@ -1,0 +1,16 @@
+{
+  "host": "http://localhost",
+  "port": 8091,
+  "db": {
+    "mongodbUrl": "mongodb://localhost:27017/test",
+    "dbName": "test",
+    "collections": {
+      "projects": "projects",
+      "users": "users"
+    }
+  },
+  "api": {
+    "projects": "/projects",
+    "static": "./public/"
+  }
+}

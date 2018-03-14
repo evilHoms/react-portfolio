@@ -1,0 +1,21 @@
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 7px 10px;
+  min-width: 280px;
+  width: 80vh;
+  max-width: 900px;
+}
+
+.contact-item-title {
+  text-transform: capitalize;
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-item-value {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}

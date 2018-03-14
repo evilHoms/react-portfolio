@@ -1,3 +1,4 @@
+require("babel-polyfill");
 const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
@@ -11,11 +12,13 @@ const extractPluginCss = new extractTextPlugin({
   filename: 'style.css'
 });
 
+const distFolder = 'public/assets';
+
 module.exports = {
-  entry: './src/app.js',
+  entry: ['babel-polyfill', './src/client.js'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, distFolder),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -25,7 +28,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['env', 'react']
+              presets: ['env', 'react'],
+              plugins: ['transform-decorators-legacy']
             }
           }
         ],
@@ -80,6 +84,10 @@ module.exports = {
     new htmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new cleanWebpackPlugin(['dist'])
-  ]
+    new cleanWebpackPlugin([distFolder])
+  ],
+  devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
+  devServer: {
+    headers: { 'Access-Control-Allow-Origin': '*' }
+  }
 };

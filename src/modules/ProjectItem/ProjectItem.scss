@@ -1,0 +1,86 @@
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0 10px;
+  width: 200px;
+  height: 350px;
+  text-align: center;
+  border: 1px solid rgb(70, 20, 10);
+  border-radius: 3px;
+
+  transform: scale(1);
+  transition: 1s;
+  cursor: pointer;
+
+  background-color: rgba($color: #000000, $alpha: 0.85);
+  box-shadow: 0 0 3px 3px rgba($color: #ffffff, $alpha: 0.0);
+  background-size: cover;
+}
+
+.big-item {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  cursor: default;
+}
+
+.project-item h3 {
+  padding: 20px;
+
+  background-color: rgba($color: #000000, $alpha: 0.7);
+
+  font-size: 18px;
+  font-family: 'Comfortaa', cursive;
+
+  transition: 1s;
+}
+
+.project-item button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  cursor: pointer;
+}
+
+.project-item .info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  background-color: rgba($color: #000000, $alpha: 0.0);
+
+  transition: 0.5s;
+}
+
+.github,
+.demo,
+.descr {
+  opacity: 0;
+  transition: 1s;
+}
+
+.small-item:hover {
+  transform: scale(1.05);
+  z-index: 100;
+  background-color: rgba($color: #000000, $alpha: 0.95);
+  box-shadow: 0 0 3px 3px rgba($color: #ffffff, $alpha: 0.5);
+}
+
+.project-item:hover .github,
+.project-item:hover .demo,
+.project-item:hover .descr {
+  opacity: 1;
+}
+
+.project-item:hover h3,
+.project-item:hover .info {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+}

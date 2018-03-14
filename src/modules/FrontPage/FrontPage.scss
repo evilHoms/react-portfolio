@@ -1,0 +1,63 @@
+$title-block-top: 50px;
+$side-blocks-top: 40vh;
+$side-block-side: 12vw;
+
+$main-color: #fff;
+$accent-color: #f57570;
+
+.front-page {
+  position: relative;
+  z-index: 100;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+}
+
+.front-title {
+  position: absolute;
+  top: $title-block-top;
+  text-align: center;
+}
+
+.front-title h1 {
+  color: $main-color;
+  font-size: 54px;
+  font-family: 'Comfortaa', cursive;
+  text-shadow: 0 0 8px $main-color;
+}
+
+.front-title h2 {
+  font-size: 28px;
+  color: $accent-color;
+  font-family: 'Kurale', serif;
+}
+
+.text-left {
+  position: absolute;
+  text-align: center;
+  top: $side-blocks-top;
+  left: $side-block-side;
+}
+
+.text-right {
+  position: absolute;
+  text-align: center;
+  top: $side-blocks-top;
+  right: $side-block-side;
+}
+
+.text-title {
+  font-size: 24px;
+  color: $accent-color;
+  font-family: 'Kurale', serif;
+}
+
+.text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: $main-color;
+  font-family: 'Open Sans', sans-serif;
+}

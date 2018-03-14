@@ -1,0 +1,146 @@
+$transform-offset: 100px;
+$anim-speed: 2s;
+
+.hidden-element {
+  opacity: 0;
+}
+
+.appearing-top {
+  animation: appearing-top $anim-speed;
+}
+
+.appearing-left {
+  animation: appearing-left $anim-speed;
+}
+
+.appearing-right {
+  animation: appearing-right $anim-speed;
+}
+
+.appearing-place {
+  animation: appearing-place $anim-speed;
+}
+
+.hidding-place {
+  animation: hidding-place $anim-speed;
+}
+
+.hidding-top {
+  animation: hidding-top $anim-speed;
+}
+
+.hidding-left {
+  animation: hidding-left $anim-speed;
+}
+
+.hidding-right {
+  animation: hidding-right $anim-speed;
+}
+
+@keyframes appearing-top {
+  from {
+    opacity: 0;
+    transform: translateY(-#{$transform-offset});
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appearing-left {
+  from {
+    opacity: 0;
+    transform: translateX(-#{$transform-offset});
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearing-right {
+  from {
+    opacity: 0;
+    transform: translateX(#{$transform-offset});
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearing-place {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hidding-place {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hidding-top {
+  to {
+    opacity: 0;
+    transform: translateY(-#{$transform-offset});
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(-#{$transform-offset / 2});
+  }
+
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hidding-left {
+  to {
+    opacity: 0;
+    transform: translateX(-#{$transform-offset});
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(-#{$transform-offset / 2});
+  }
+
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hidding-right {
+  to {
+    opacity: 0;
+    transform: translateX(#{$transform-offset});
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(#{$transform-offset / 2});
+  }
+
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
