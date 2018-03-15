@@ -1,3 +1,6 @@
+$main-color: #fff;
+$accent-color: #f57570;
+
 .project-item {
   display: flex;
   flex-direction: column;
@@ -83,4 +86,41 @@
 .project-item:hover h3,
 .project-item:hover .info {
   background-color: rgba($color: #000000, $alpha: 0.9);
+}
+
+.project-item .info a {
+  color: $accent-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.project-item .info a:hover {
+  text-decoration: underline;
+  color: $main-color;
+}
+
+.project-item .info a:active {
+  color: $accent-color;
+}
+
+.project-item .info p {
+  color: $main-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.project-item-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: $accent-color;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: $main-color;
+  font-family: 'Comfortaa', cursive;
+  font-size: 10px;
 }

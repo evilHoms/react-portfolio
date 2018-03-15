@@ -1,4 +1,4 @@
-$title-block-top: 50px;
+$title-block-top: 7vh;
 $side-blocks-top: 40vh;
 $side-block-side: 12vw;
 
@@ -35,17 +35,19 @@ $accent-color: #f57570;
   font-family: 'Kurale', serif;
 }
 
-.text-left {
-  position: absolute;
-  text-align: center;
-  top: $side-blocks-top;
-  left: $side-block-side;
-}
-
+.text-left,
 .text-right {
   position: absolute;
   text-align: center;
   top: $side-blocks-top;
+  max-width: 30%;
+}
+
+.text-left {
+  left: $side-block-side;
+}
+
+.text-right {
   right: $side-block-side;
 }
 

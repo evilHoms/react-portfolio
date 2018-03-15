@@ -1,21 +1,43 @@
+$main-color: #fff;
+$accent-color: #f57570;
+
 .contact-item {
   display: flex;
   justify-content: space-between;
 
   padding: 7px 10px;
   min-width: 280px;
-  width: 80vh;
-  max-width: 900px;
+  width: 70vw;
+  max-width: 750px;
 }
 
 .contact-item-title {
   text-transform: capitalize;
   font-family: 'Comfortaa', cursive;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  color: $main-color;
 }
 
 .contact-item-value {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  color: $main-color;
+}
+
+.contact-item a {
+  color: $accent-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  color: $main-color;
+}
+
+.contact-item a:active {
+  color: $accent-color;
 }

@@ -2,6 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './FrontPage.scss';
 import AnimatedBlock from '../AnimatedBlock/AnimatedBlock.js';
+import AutoSlider from '../AutoSlider/AutoSlider.js';
+import config from '../../../config.json';
+
+const imagesSrc = [
+  config.api.static + '/images/react.png',
+  config.api.static + '/images/node.png',
+  config.api.static + '/images/express.png',
+  config.api.static + '/images/javascript.png',
+  config.api.static + '/images/css.png',
+  config.api.static + '/images/sass.png',
+  config.api.static + '/images/html.png'
+];
+
+const sliderConfig = {
+  items: imagesSrc.map((el,index) => 
+    <img 
+      src={el} 
+      key={index} 
+      style={{
+        maxHeight: '100px',
+        maxWidth: '200px'
+      }} 
+    />
+  ),
+  period: 2000,
+  imgMaxHeight: 200
+}
 
 export default class FrontPage extends React.Component {
   constructor(props) {
@@ -26,8 +53,9 @@ export default class FrontPage extends React.Component {
             Technology stack
           </h3>
           <p className='text'>
-            text
+            ReactJs, NodeJs, Express, JavaScript, CSS, Sass, HTML.
           </p>
+          <AutoSlider items={sliderConfig.items} period={sliderConfig.period} />
         </AnimatedBlock>
 
         <AnimatedBlock name='text-right' classMod={this.props.classMod} dirrection='right'>
@@ -35,7 +63,7 @@ export default class FrontPage extends React.Component {
             My experience
           </h3>
           <p className='text'>
-            text
+            More than two years of successful work in freelancing, more than a year as a web developer in JavaScript.
           </p>
         </AnimatedBlock>
       </div>

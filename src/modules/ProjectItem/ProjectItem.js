@@ -17,8 +17,8 @@ export default class ProjectItem extends React.Component {
     }
 
     this.closeBtn = (
-      <button onClick={this.onCloseClick.bind(this)}>
-        x
+      <button className='project-item-close-btn' onClick={this.onCloseClick.bind(this)}>
+        X
       </button>
     );
   }
@@ -42,6 +42,7 @@ export default class ProjectItem extends React.Component {
 
   render() {
     const sizeClass = this.state.stage === 'small' ? 'small-item' : 'big-item';
+    const isHidden = this.state.stage === 'small' ? 'hidden' : '';
 
     return(
       <section 
@@ -54,13 +55,13 @@ export default class ProjectItem extends React.Component {
           {this.props.projectName}
         </h3>
         <div className='info'>
-          <a className='github' href={this.props.githubHref}>
+          <a className={`github ${isHidden}`} href={this.props.githubHref}>
             {this.props.githubHref}
           </a>
           <a className='demo' href={this.props.projectDemo}>
             {this.props.projectDemo}
           </a>
-          <p className='descr'>
+          <p className={`descr ${isHidden}`}>
             {this.props.description}
           </p>
         </div>
