@@ -22,12 +22,14 @@ const sliderConfig = {
       key={index} 
       style={{
         maxHeight: '100px',
-        maxWidth: '200px'
+        minHeight: '100px'
       }} 
     />
   ),
-  period: 2000,
-  imgMaxHeight: 200
+  period: 3000,
+  style: {
+    marginTop: '20px'
+  }
 }
 
 export default class FrontPage extends React.Component {
@@ -55,7 +57,11 @@ export default class FrontPage extends React.Component {
           <p className='text'>
             ReactJs, NodeJs, Express, JavaScript, CSS, Sass, HTML.
           </p>
-          <AutoSlider items={sliderConfig.items} period={sliderConfig.period} />
+          <AutoSlider 
+            items={sliderConfig.items} 
+            period={sliderConfig.period} 
+            style={sliderConfig.style}
+          />
         </AnimatedBlock>
 
         <AnimatedBlock name='text-right' classMod={this.props.classMod} dirrection='right'>
