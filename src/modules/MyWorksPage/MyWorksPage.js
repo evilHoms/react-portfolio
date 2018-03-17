@@ -20,13 +20,25 @@ export default class MyWorksPage extends React.Component {
   render() {
     return (
       <div className='works-page'>
-        <AnimatedBlock name='works-title' classMod={this.props.classMod} dirrection='top'>
+        <AnimatedBlock 
+          name='works-title' 
+          classMod={this.props.classMod} 
+          dirrection='top'
+        >
           <h1>
             MY WORKS
           </h1>
         </AnimatedBlock>
 
         <ProjectsWrapper classMod={this.props.classMod} />
+
+        <AnimatedBlock 
+          name='works-page-after-text' 
+          classMod={this.props.classMod} 
+          dirrection='place'
+        >
+          Some text for wokrs page
+        </AnimatedBlock>
       </div>
     );
   }

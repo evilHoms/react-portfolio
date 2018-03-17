@@ -9,10 +9,10 @@ const imagesSrc = [
   config.api.static + '/images/react.png',
   config.api.static + '/images/node.png',
   config.api.static + '/images/express.png',
-  config.api.static + '/images/javascript.png',
   config.api.static + '/images/css.png',
+  config.api.static + '/images/html.png',
   config.api.static + '/images/sass.png',
-  config.api.static + '/images/html.png'
+  config.api.static + '/images/javascript.png'
 ];
 
 const sliderConfig = {

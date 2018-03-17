@@ -64,7 +64,6 @@ export default class AutoSliderItem extends React.Component {
 
   componentWillUnmount() {
     this.mount = false;
-    console.log(this.mount)
   }
 
   render() {

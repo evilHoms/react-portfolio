@@ -6,16 +6,12 @@ import config from '../../../config.json';
 export default class ProjectItem extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
-
     this.itemBgStyle = {
       backgroundImage: `url(${config.api.static}images/${this.props.imageSrc})`
     };
-
     this.state = {
       stage: 'small'
     }
-
     this.closeBtn = (
       <button className='project-item-close-btn' onClick={this.onCloseClick.bind(this)}>
         X
@@ -28,13 +24,11 @@ export default class ProjectItem extends React.Component {
       this.setState({
         stage: 'big'
       });
-      console.log('item clicked');
     }
   }
 
   onCloseClick(e) {
     e.preventDefault();
-    console.log('close item');
     this.setState({
       stage: 'small'
     });
