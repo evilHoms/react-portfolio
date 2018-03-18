@@ -72,6 +72,19 @@ export default class FrontPage extends React.Component {
             More than two years of successful work in freelancing, more than a year as a web developer in JavaScript.
           </p>
         </AnimatedBlock>
+
+        <AnimatedBlock name='front-after-text' dirrection='place' classMod={this.props.classMod}>
+          <p>I'm the one you need!</p>
+          <p>If you have a project that you want to get started, think you need my help</p>
+          <p>with something or just fancy saying hey, then get in touch.</p>
+
+          <a href='mailto:homspage.work@gmail.com'>
+            <button className='front-message-btn'>
+              Message Me
+            </button>
+          </a>
+
+        </AnimatedBlock>
       </div>
     );
   }

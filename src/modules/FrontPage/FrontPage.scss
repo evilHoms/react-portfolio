@@ -1,5 +1,5 @@
 $title-block-top: 7vh;
-$side-blocks-top: 40vh;
+$side-blocks-top: 30vh;
 $side-block-side: 12vw;
 
 $main-color: #fff;
@@ -66,6 +66,58 @@ $accent-color: #f57570;
   font-family: 'Open Sans', sans-serif;
 }
 
+.front-after-text {
+  position: absolute;
+  top: 63vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.front-after-text p:nth-child(1) {
+  font-family: 'Kurale', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: $accent-color;
+  margin-bottom: 10px;
+  text-shadow: 0 0 4px black;
+}
+
+.front-after-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.front-after-text button {
+  margin-top: 50px;
+}
+
+.front-message-btn {
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+
+  background-color: $accent-color;
+  color: $main-color;
+  font-family: 'Comfortaa', cursive;
+  font-size: 24px;
+
+  transform: translateY(0px);
+  box-shadow: 0 0 3px 3px transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.front-message-btn:hover {
+  box-shadow: 0 0 3px 3px #fff;
+}
+
+.front-message-btn:active {
+  transform: translateY(5px);
+}
+
 @media (max-width: 700px) {
   .text-right {
     display: none;
@@ -75,5 +127,32 @@ $accent-color: #f57570;
     left: auto;
     right: auto;
     margin: 0 auto;
+  }
+
+  .front-after-text {
+    top: 70vh;
+  }
+
+  .front-after-text button {
+    margin-top: 20px;
+  }
+
+  .front-after-text p {
+    display: none;
+  }
+}
+
+@media (max-height: 400px) {
+  .front-after-text p {
+    display: none;
+  }
+  .front-after-text button {
+    display: none;
+  }
+  .text-left h3 {
+    display: none;
+  }
+  .text-left {
+    margin-top: 20px;
   }
 }

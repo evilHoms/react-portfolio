@@ -1,0 +1,38 @@
+$main-color: #fff;
+$accent-color: #f57570;
+
+.send-msg-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.send-msg-textarea {
+  margin-bottom: 30px;
+}
+
+.send-msg-btn {
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+
+  background-color: $accent-color;
+  color: $main-color;
+  font-family: 'Comfortaa', cursive;
+  font-size: 24px;
+
+  transform: translateY(0px);
+  box-shadow: 0 0 3px 3px transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.send-msg-btn:hover {
+  box-shadow: 0 0 3px 3px #fff;
+}
+
+.send-msg-btn:active {
+  transform: translateY(5px);
+}

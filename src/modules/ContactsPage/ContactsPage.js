@@ -4,6 +4,7 @@ import './ContactsPage.scss';
 import AnimatedBlock from '../AnimatedBlock/AnimatedBlock.js';
 import ContactsWrapper from '../ContactsWrapper/ContactsWrapper.js';
 import ContactItem from '../ContactItem/ContactItem.js';
+import SendMsgForm from '../SendMsgForm/SendMsgForm.js';
 
 export default class ContactsPage extends React.Component {
   constructor(props) {
@@ -23,10 +24,6 @@ export default class ContactsPage extends React.Component {
           </h1>
         </AnimatedBlock>
 
-        <AnimatedBlock name='contacts-big-screens-text' classMod={this.props.classMod} dirrection='top'>
-          Text for big screens
-        </AnimatedBlock>
-
         <ContactsWrapper>
           <ContactItem name='email' value={email} pageState={this.props.classMod} />
           <ContactItem name='telegram' value={telegram} pageState={this.props.classMod} />
@@ -36,14 +33,9 @@ export default class ContactsPage extends React.Component {
         <AnimatedBlock name='contacts-after-text' dirrection='place' classMod={this.props.classMod}>
           <p>My name is Igor</p> 
           <p>I'm the one you need!</p>
-          <p>If you have a project that you want to get started, think you need my help</p>
-          <p>with something or just fancy saying hey, then get in touch.</p>
+          <p>You can apply at any time, any reply will be replied in the shortest time, all links are clickable.</p>
 
-          <a href='mailto:homspage.work@gmail.com'>
-            <button className='contacts-message-btn'>
-              Message Me
-            </button>
-          </a>
+          <SendMsgForm />
 
         </AnimatedBlock>
       </div>

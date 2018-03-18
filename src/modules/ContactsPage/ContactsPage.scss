@@ -60,6 +60,16 @@ $accent-color: #f57570;
   transform: translateY(5px);
 }
 
+// .contacts-big-screens-text {
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: 16px;
+//   line-height: 1.4;
+//   max-width: 500px;
+//   text-align: center;
+//   text-shadow: 0 0 3px black;
+//   margin-bottom: 150px;
+// }
+
 .contacts-after-text {
   display: flex;
   flex-direction: column;
@@ -90,9 +100,9 @@ $accent-color: #f57570;
   line-height: 1.4;
 }
 
-.contacts-after-text button {
-  margin-top: 50px;
-}
+// .contacts-after-text button {
+//   margin-top: 50px;
+// }
 
 @media (max-width: 700px) {
   .contacts-page {
@@ -130,5 +140,9 @@ $accent-color: #f57570;
 @media (min-height: 900px) {
   .contacts-big-screens-text {
     display: block;
+  }
+
+  .contacts-after-text {
+    margin-bottom: 18vh;
   }
 }
