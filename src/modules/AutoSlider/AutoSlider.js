@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import AutoSliderItem from'../AutoSliderItem/AutoSliderItem.js';
 
 export default class AutoSlider extends React.Component {
+  /* Компонент слайдера стака технологий на главной странице */
+
   constructor(props) {
     super(props);
     this.currentItemIndex = 0;

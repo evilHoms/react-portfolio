@@ -32,6 +32,10 @@ $accent-color: #f57570;
   font-family: 'Kurale', serif;
 }
 
+.contacts-big-screens-text {
+  display: none;
+}
+
 .contacts-message-btn {
   border: none;
   border-radius: 3px;
@@ -88,4 +92,43 @@ $accent-color: #f57570;
 
 .contacts-after-text button {
   margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+  .contacts-page {
+    height: 85vh;
+  }
+
+  .contacts-after-text {
+    margin-bottom: 0vh;
+  }
+
+  .contacts-after-text p:nth-child(1) {
+    font-size: 26px;
+  }
+
+  .contacts-after-text p:nth-child(2) {
+    font-size: 18px;
+  }
+
+  .contacts-after-text p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .contacts-after-text button {
+    margin-top: 20px;
+  }
+
+  .contacts-message-btn {
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (min-height: 900px) {
+  .contacts-big-screens-text {
+    display: block;
+  }
 }

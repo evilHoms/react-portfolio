@@ -40,8 +40,9 @@ $accent-color: #f57570;
   position: absolute;
   text-align: center;
   top: $side-blocks-top;
-  width: 500px;
-  max-width: 30%;
+  min-width: 290px;
+  width: 30%;
+  max-width: 600px;
 }
 
 .text-left {
@@ -63,4 +64,16 @@ $accent-color: #f57570;
   margin-top: 10px;
   color: $main-color;
   font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 700px) {
+  .text-right {
+    display: none;
+  }
+
+  .text-left {
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+  }
 }

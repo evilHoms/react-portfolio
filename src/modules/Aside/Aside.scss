@@ -2,6 +2,7 @@ $aside-color: rgba(255, 155, 155, 0.15);
 $bg-color: rgba(0, 0, 0, 1);
 $aside-hovered-width: 80px;
 $aside-width: 60px;
+$mobile-aside-width: 50vw;
 
 
 .hidden {
@@ -124,5 +125,83 @@ $aside-width: 60px;
   to {
     width: $aside-width;
     opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .left-push-page,
+  .right-push-page {
+    top: 90vh;
+    width: $mobile-aside-width;
+    box-shadow: none;
+  }
+
+  .left-push-page {
+    border-right: 1px solid black;
+  }
+
+  .right-push-page {
+    border-left: 1px solid black;
+  }
+
+  .left-push-page:hover,
+  .right-push-page:hover {
+    width: $mobile-aside-width;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .left-push-page:hover .push-page-letter,
+  .right-push-page:hover .push-page-letter {
+    text-shadow: none;
+  }
+
+  .push-page-word {
+    flex-direction: row;
+  }
+
+  .push-page-space {
+    margin: 0 7px;
+  }
+
+  @keyframes appears-aside {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: $mobile-aside-width;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-aside {
+    from {
+      width: $mobile-aside-width;
+      opacity: 1;
+      z-index: 100000;
+    }
+    50% {
+      opacity: 1;
+      z-index: 100000;
+    }
+    to {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes hide-aside {
+    from {
+      width: $mobile-aside-width;
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    to {
+      width: 0;
+      opacity: 0;
+    }
   }
 }

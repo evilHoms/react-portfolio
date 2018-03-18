@@ -8,6 +8,8 @@ const CLASS_MODS = {
 }
 
 export default class AutoSliderItem extends React.Component {
+  /* Компонент элемент в слайдере стака технологий на главной странице */
+
   constructor(props) {
     super(props);
     this.isStable = true;

@@ -37,7 +37,7 @@ export default class MyWorksPage extends React.Component {
           classMod={this.props.classMod} 
           dirrection='place'
         >
-          Some text for wokrs page
+          All additional information and links to the project, are available in the description, when clicking on it.
         </AnimatedBlock>
       </div>
     );

@@ -23,6 +23,10 @@ export default class ContactsPage extends React.Component {
           </h1>
         </AnimatedBlock>
 
+        <AnimatedBlock name='contacts-big-screens-text' classMod={this.props.classMod} dirrection='top'>
+          Text for big screens
+        </AnimatedBlock>
+
         <ContactsWrapper>
           <ContactItem name='email' value={email} pageState={this.props.classMod} />
           <ContactItem name='telegram' value={telegram} pageState={this.props.classMod} />

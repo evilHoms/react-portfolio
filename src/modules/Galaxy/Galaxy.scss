@@ -35,3 +35,13 @@
     transform: rotate(-360deg);
   }
 }
+
+@media (max-width: 700px) {
+  .galaxy-image {
+    background-size: 80%;
+  }
+
+  .galaxy-gradient {
+    background: radial-gradient(circle at 50%, transparent 1%, black 33%);
+  }
+}
