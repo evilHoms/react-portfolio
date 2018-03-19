@@ -23,13 +23,18 @@ export default class SendMsgForm extends React.Component {
     };
   }
 
+  sendData(e, apiUrl) {
+    e.preventDefault();
+    console.log('send to ' + apiUrl);
+  }
+
   render() {
     return (
       <form className='send-msg-form'>
-        <textarea className='send-msg-textarea' defaultValue='some message'>
+        <textarea className='send-msg-textarea' placeholder='Enter your message here' rows='6' cols='40'>
         </textarea>
-        <button className='send-msg-btn'>
-          send
+        <button className='send-msg-btn' onClick={(e) => this.sendData(e, this.props.apiUrl)}>
+          Send Message
         </button>
       </form>
     );
