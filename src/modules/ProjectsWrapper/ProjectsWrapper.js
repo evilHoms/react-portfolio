@@ -97,8 +97,6 @@ export default class ProjectsWrapper extends React.Component {
   }
 
   setNumberOfProjects() {
-    console.log('resize');
-    console.log(this.state.projects);
     if (window.innerWidth > 1700) {
       this.projectsPerRow = 5;
     }

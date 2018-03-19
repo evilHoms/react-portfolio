@@ -5,6 +5,7 @@ import AnimatedBlock from '../AnimatedBlock/AnimatedBlock.js';
 import ContactsWrapper from '../ContactsWrapper/ContactsWrapper.js';
 import ContactItem from '../ContactItem/ContactItem.js';
 import SendMsgForm from '../SendMsgForm/SendMsgForm.js';
+import config from '../../../config.json';
 
 export default class ContactsPage extends React.Component {
   constructor(props) {
@@ -33,9 +34,8 @@ export default class ContactsPage extends React.Component {
         <AnimatedBlock name='contacts-after-text' dirrection='place' classMod={this.props.classMod}>
           <p>My name is Igor</p> 
           <p>I'm the one you need!</p>
-          <p>You can apply at any time, any reply will be replied in the shortest time, all links are clickable.</p>
-
-          <SendMsgForm />
+          <p>You can contact me by one of the contacts above, or leave your details in the form below and I will contact you as soon as possible.</p>
+          <SendMsgForm apiUrl={config.api.sendMsg} />
 
         </AnimatedBlock>
       </div>
