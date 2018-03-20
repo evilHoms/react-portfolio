@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee);
+
+$rotate-speed: 3;
+
+$color-one: #bccf02;
+$color-two: #73c5e1;
+$color-three: #eb65a0;
+
+.loader {
+  position: absolute;
+  top: 45%;
+  
+  width: 100%;
+  text-align: center;
+  
+  text-transform: uppercase;
+  font-size: 36px;
+  font-family: 'Bungee';
+}
+
+.loader span {
+  display: inline-block;
+  color: $color-one;
+  transition: 0.3s;
+}
+
+.loader span:nth-child(1) { animation: rotateX #{$rotate-speed}s infinite,
+  changeColor #{$rotate-speed * 3}s infinite; }
+.loader span:nth-child(2) { animation: rotateX #{$rotate-speed}s calc(#{$rotate-speed}s / 7) infinite,
+changeColor #{$rotate-speed * 3}s calc(#{$rotate-speed}s / 7) infinite; }
+.loader span:nth-child(3) { animation: rotateX #{$rotate-speed}s calc(#{$rotate-speed}s / 7 * 2) infinite,
+changeColor #{$rotate-speed * 3}s calc(#{$rotate-speed}s / 7 * 2) infinite; }
+.loader span:nth-child(4) { animation: rotateX #{$rotate-speed}s calc(#{$rotate-speed}s / 7 * 3) infinite,
+changeColor #{$rotate-speed * 3}s calc(#{$rotate-speed}s / 7 * 3) infinite; }
+.loader span:nth-child(5) { animation: rotateX #{$rotate-speed}s calc(#{$rotate-speed}s / 7 * 4) infinite,
+changeColor #{$rotate-speed * 3}s calc(#{$rotate-speed}s / 7 * 4) infinite; }
+.loader span:nth-child(6) { animation: rotateX #{$rotate-speed}s calc(#{$rotate-speed}s / 7 * 5) infinite,
+changeColor #{$rotate-speed * 3}s calc(#{$rotate-speed}s / 7 * 5) infinite; }
+.loader span:nth-child(7) { animation: rotateX #{$rotate-speed}s calc(#{$rotate-speed}s / 7 * 6) infinite,
+changeColor #{$rotate-speed * 3}s calc(#{$rotate-speed}s / 7 * 6) infinite; }
+
+@keyframes rotateX {
+  from {
+    transform: rotateX(0deg);
+  }
+  40% {
+    transform: rotateX(360deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes changeColor {
+  from {
+    color: $color-one;
+  }
+  6% {
+    color: $color-one;
+  }
+  7% {
+    color: $color-two;
+  }
+  39% {
+    color: $color-two;
+  }
+  40% {
+    color: $color-three;
+  }
+  73% {
+    color: $color-three;
+  }
+  74% {
+    color: $color-one;
+  }
+  to {
+    color: $color-one;
+  }
+}
+
+
+.hide-loader {
+  opacity: 0;
+  z-index: -100;
+
+  animation: hide-loader 1s;
+}
+
+@keyframes hide-loader {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

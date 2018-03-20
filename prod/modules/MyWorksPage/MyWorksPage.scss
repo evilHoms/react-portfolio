@@ -1,0 +1,45 @@
+$title-block-top: 7vh;
+$side-blocks-top: 40vh;
+$side-block-side: 12vw;
+
+$main-color: #fff;
+$accent-color: #f57570;
+
+.works-page {
+  position: relative;
+  z-index: 100;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: $title-block-top;
+  margin: 0 $side-block-side;
+
+  color: white;
+}
+
+.works-title {
+  text-align: center;
+}
+
+.works-title h1 {
+  color: $accent-color;
+  font-size: 36px;
+  font-family: 'Kurale', serif;
+}
+
+.works-page-after-text {
+  margin-top: 50px;
+  text-align: center;
+  max-width: 600px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .works-page-after-text {
+    display: none;
+  }
+}

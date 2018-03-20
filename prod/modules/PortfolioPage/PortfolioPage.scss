@@ -1,0 +1,22 @@
+.portfolio-page-block {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  bottom: 100%;
+  background-color: #000;
+}
+
+.falling {
+  bottom: 0%;
+  animation: falling 1s cubic-bezier(.75,.14,.96,.6);
+}
+
+@keyframes falling {
+  from {
+    bottom: 100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}

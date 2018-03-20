@@ -11,6 +11,8 @@
   },
   "api": {
     "projects": "/projects",
+    "sendMsg": "/send_msg",
     "static": "./public/"
-  }
+  },
+  "production": true
 }

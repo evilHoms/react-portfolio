@@ -1,0 +1,19 @@
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 15vh;
+
+}
+
+.projects-wrapper-list {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 520px) {
+  .projects-wrapper {
+    margin-top: 5vh;
+  }
+}

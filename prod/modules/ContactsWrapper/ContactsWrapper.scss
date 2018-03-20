@@ -1,0 +1,13 @@
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px 7px;
+  margin-top: 0px;
+}
+
+@media (max-width: 700px) {
+ .contacts-wrapper {
+   margin-top: 0px;
+ } 
+}

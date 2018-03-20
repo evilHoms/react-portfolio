@@ -12,7 +12,7 @@ const extractPluginCss = new extractTextPlugin({
   filename: 'style.css'
 });
 
-const distFolder = 'public/assets';
+const distFolder = 'prod/server/public';
 
 module.exports = {
   entry: ['babel-polyfill', './src/client.js'],
