@@ -1,6 +1,5 @@
 import rootHandler from './routes/root.js';
 import getProjectsHandler from './routes/getProjects.js';
-import newProjectHandler from './routes/newProject.js';
 import addProjectHandler from './routes/addProject.js';
 import sendMessageHandler from './routes/sendMessage.js';
 import deleteProjectHandler from './routes/deleteProject.js';
@@ -10,7 +9,6 @@ import bodyParser from 'body-parser';
 const paths = {
   root: '/',
   projects: '/projects',
-  newProject: '/new_project',
   sendMsg: '/send_msg'
 }
 

@@ -2,12 +2,14 @@
   "ip": "0.0.0.0",
   "host": "http://localhost",
   "port": 8091,
+  "pass": "Garik1905",
   "db": {
-    "mongodbUrl": "mongodb://localhost:27017/test",
-    "dbName": "test",
+    "mongodbUrl": "mongodb://evilHoms:Garik1905@ds223009.mlab.com:23009/evildb",
+    "dbName": "evildb",
+    "dbUser": "evilHoms",
+    "dbPass": "Garik1905",
     "collections": {
-      "projects": "projects",
-      "users": "users"
+      "projects": "projects"
     }
   },
   "api": {

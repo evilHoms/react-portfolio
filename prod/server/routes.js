@@ -13,10 +13,6 @@ var _getProjects = require('./routes/getProjects.js');
 
 var _getProjects2 = _interopRequireDefault(_getProjects);
 
-var _newProject = require('./routes/newProject.js');
-
-var _newProject2 = _interopRequireDefault(_newProject);
-
 var _addProject = require('./routes/addProject.js');
 
 var _addProject2 = _interopRequireDefault(_addProject);
@@ -38,7 +34,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var paths = {
   root: '/',
   projects: '/projects',
-  newProject: '/new_project',
   sendMsg: '/send_msg'
 };
 

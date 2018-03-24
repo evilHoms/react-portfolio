@@ -37,10 +37,13 @@ export default class AddProjectItem extends React.Component {
 
   onDelete() {
     console.log('delete');
-    fetch(this.props.deleteUrl + '/?name=' + this.props.name, {
+    fetch(this.props.deleteUrl + '/?name=' + this.props.name + '&pass=' + this.deletePass.value, {
       method: 'DELETE'
     })
-      .then((res) => {return res.json()})
+      .then((res) => {
+        res.status === 403 && document.write('ACCESS DENIED!!!');
+        return res.json();
+      })
       .then(res => {
         this.setState({
           exist: false
@@ -66,7 +69,7 @@ export default class AddProjectItem extends React.Component {
         <p>
           {this.props.description}
         </p>
-        <input placeholder="password" />
+        <input ref={el => this.deletePass = el} placeholder="password" />
         <button onClick={this.onDelete.bind(this)}>
           delete
         </button>

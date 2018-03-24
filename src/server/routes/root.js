@@ -3,8 +3,8 @@ import ReactDom from 'react-dom/server';
 import App from '../../modules/App/app.js';
 import config from '../../../config.json';
 
-const port     = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || config.port;
-const ip       = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || config.ip;
+const port     = process.env.PORT || config.port;
+const ip       = process.env.IP   || config.ip;
 
 const staticPath = config.production ? 
                     'http://' + ip + ':' + port + '/public' :

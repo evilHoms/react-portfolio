@@ -23,8 +23,8 @@ var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || _config2.default.port;
-var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || _config2.default.ip;
+var port = process.env.PORT || _config2.default.port;
+var ip = process.env.IP || _config2.default.ip;
 
 var staticPath = _config2.default.production ? 'http://' + ip + ':' + port + '/public' : _config2.default.host + ':8080';
 console.log('static path: ' + staticPath);

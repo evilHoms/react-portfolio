@@ -4,25 +4,28 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
+var _mongodb = require('mongodb');
+
+var _mongodb2 = _interopRequireDefault(_mongodb);
+
 var _config = require('../../config.json');
 
 var _config2 = _interopRequireDefault(_config);
 
+var _routes = require('./routes.js');
+
+var _routes2 = _interopRequireDefault(_routes);
+
+var _path = require('path');
+
+var _path2 = _interopRequireDefault(_path);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import routes from './routes.js';
-// import path from 'path';
-
-//const MongoClient = mongodb.MongoClient;
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || _config2.default.port || 8080;
-//import mongodb from 'mongodb';
-
-var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || _config2.default.ip || '0.0.0.0';
+var MongoClient = _mongodb2.default.MongoClient;
+var port = _config2.default.port || 8080;
 
 var app = (0, _express2.default)();
-// app.use("/public", express.static(path.resolve(__dirname, 'public')));
-// app.get('/', function(req, res) {
-//   res.send('hello');
-// })
-//routes(app, MongoClient);
-app.listen(port, ip);
+app.use("/public", _express2.default.static(_path2.default.resolve(__dirname, 'public')));
+(0, _routes2.default)(app, MongoClient);
+app.listen(port);
