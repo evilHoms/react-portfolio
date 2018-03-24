@@ -11,10 +11,19 @@
     "nodemon": "nodemon server.js --exec babel-node --presets babel-preset-env",
     "start": "node server.js"
   },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/evilhoms/react-portfolio.git"
+  },
   "keywords": [
     "portfolio",
     "react"
   ],
+  "homepage": "http://github.com/evilhoms/react-poprfolio",
   "author": "homs",
   "license": "ISC",
   "devDependencies": {

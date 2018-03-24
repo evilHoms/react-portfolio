@@ -1,7 +1,5 @@
 import React from 'react';
-
 import './app.scss';
-
 import Loader from '../Loader/Loader.js';
 import PortfolioPage from '../PortfolioPage/PortfolioPage.js';
 import NotFoundPage from '../NotFoundPage/NotFoundPage.js';
