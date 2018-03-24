@@ -1,6 +1,6 @@
 import express from 'express';
 //import mongodb from 'mongodb';
-//import config from '../../config.json';
+import config from '../../config.json';
 // import routes from './routes.js';
 // import path from 'path';
 
