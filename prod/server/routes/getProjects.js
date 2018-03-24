@@ -12,7 +12,8 @@ var _config2 = _interopRequireDefault(_config);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getProjectsHandler(req, res, dbClient) {
-  dbClient.connect(_config2.default.db.mongodbUrl, function (err, client) {
+  var dbUrl = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL || _config2.default.db.mongodbUrl;
+  dbClient.connect(dbUrl, function (err, client) {
     var db = client.db(_config2.default.db.dbName);
     var projects = db.collection(_config2.default.db.collections.projects);
 

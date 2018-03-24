@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDom from 'react-dom/server';
-import {BrowserRouter} from 'react-router-dom';
 import App from '../../modules/App/app.js';
 import config from '../../../config.json';
 
+const port     = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || config.port;
+const ip       = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || config.ip;
+
 const staticPath = config.production ? 
-                    config.host + ':' + config.port + '/public' :
+                    'http://' + ip + ':' + port + '/public' :
                     config.host + ':8080';
-                    console.log(staticPath);
+                    console.log('static path: ' + staticPath);
 
 
 export default function rootHandler(req, res, dbClient) {

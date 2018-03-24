@@ -13,8 +13,6 @@ var _server = require('react-dom/server');
 
 var _server2 = _interopRequireDefault(_server);
 
-var _reactRouterDom = require('react-router-dom');
-
 var _app = require('../../modules/App/app.js');
 
 var _app2 = _interopRequireDefault(_app);
@@ -25,8 +23,11 @@ var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var staticPath = _config2.default.production ? _config2.default.host + ':' + _config2.default.port + '/public' : _config2.default.host + ':8080';
-console.log(staticPath);
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || _config2.default.port;
+var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || _config2.default.ip;
+
+var staticPath = _config2.default.production ? 'http://' + ip + ':' + port + '/public' : _config2.default.host + ':8080';
+console.log('static path: ' + staticPath);
 
 function rootHandler(req, res, dbClient) {
   if (!_config2.default.production) {
