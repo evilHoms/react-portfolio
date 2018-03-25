@@ -4,7 +4,10 @@ import './AddProjectPage.scss';
 import config from '../../../config.json';
 import AddProjectItem from '../AddProjectItem/AddProjectItem.js';
 
-const url = `${config.host}:${config.port}${config.api.projects}`;
+
+const url = config.production ? 
+             `${config.ip}${config.api.projects}` : 
+             `${config.host}:${config.port}${config.api.projects}`;
 
 export default class AddProject extends React.Component {
   constructor(props) {
