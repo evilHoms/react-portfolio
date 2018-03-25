@@ -13,6 +13,7 @@ const projectsURL =
   config.production ? 
   `${config.ip}${config.api.projects}`:
   `${config.host}:${config.port}${config.api.projects}`;
+console.log(projectsURL);
 
 export default class ProjectsWrapper extends React.Component {
 
