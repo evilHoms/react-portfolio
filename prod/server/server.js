@@ -23,7 +23,7 @@ var _path2 = _interopRequireDefault(_path);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MongoClient = _mongodb2.default.MongoClient;
-var port = _config2.default.port || 8080;
+var port = process.env.PORT || _config2.default.port || 8080;
 
 var app = (0, _express2.default)();
 app.use("/public", _express2.default.static(_path2.default.resolve(__dirname, 'public')));
