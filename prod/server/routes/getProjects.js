@@ -18,6 +18,7 @@ function getProjectsHandler(req, res, dbClient) {
     var projects = db.collection(_config2.default.db.collections.projects);
 
     var data = projects.find().toArray(function (err, result) {
+      console.log(result);
       if (err) throw err;
       res.writeHead(200, {
         'Access-Control-Allow-Origin': '*'
