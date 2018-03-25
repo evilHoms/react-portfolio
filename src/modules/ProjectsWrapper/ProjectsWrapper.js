@@ -8,7 +8,11 @@ import ProjectsLoader from '../ProjectsLoader/ProjectsLoader.js';
 import FontAwesome from 'react-fontawesome';
 import config from '../../../config.json';
 
-const projectsURL = `${config.host}:${config.port}${config.api.projects}`;
+
+const projectsURL = 
+  config.production ? 
+  `${config.ip}${config.api.projects}`:
+  `${config.host}:${config.port}${config.api.projects}`;
 
 export default class ProjectsWrapper extends React.Component {
 
