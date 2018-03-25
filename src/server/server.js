@@ -5,7 +5,7 @@ import routes from './routes.js';
 import path from 'path';
 
 const MongoClient = mongodb.MongoClient;
-const port     = config.port || 8080;
+const port = process.env.PORT || config.port || 8080;
 
 const app = express();
 app.use("/public", express.static(path.resolve(__dirname, 'public')));
