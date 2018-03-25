@@ -7,7 +7,7 @@ const port     = process.env.PORT || config.port;
 const ip       = process.env.IP   || config.ip;
 
 const staticPath = config.production ? 
-                    'https://' + ip + '/public' :
+                    ip + '/public' :
                     config.host + ':8080';
                     console.log('static path: ' + staticPath);
 
