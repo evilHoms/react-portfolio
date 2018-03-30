@@ -13,7 +13,9 @@ export default function addProjectHandler(req, res, dbClient) {
 
         if (result === null) {
           projects.insertOne(req.body, (err, result) => {
-            res.writeHead(200);
+            res.writeHead(200, {
+              "Access-Control-Allow-Origin": "*"
+            });
             console.log(req.body);
             res.end(JSON.stringify(req.body));
             client.close();
@@ -21,7 +23,9 @@ export default function addProjectHandler(req, res, dbClient) {
           console.log('add new project');
         }
         else {
-          res.writeHead(200);
+          res.writeHead(200, {
+            "Access-Control-Allow-Origin": "*"
+          });
           res.end(JSON.stringify(result));
           client.close();
         }
@@ -29,7 +33,9 @@ export default function addProjectHandler(req, res, dbClient) {
     });
   }
   else {
-    res.writeHead(403);
+    res.writeHead(403, {
+      "Access-Control-Allow-Origin": "*"
+    });
     res.write(JSON.stringify({res: "ACCESS DENIED!!!"}));
     res.end()
   }
